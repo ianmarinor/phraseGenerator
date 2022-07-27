@@ -1,15 +1,30 @@
 let pluralObject = {
     pluralPerson: ['I','You','We','They'],
-    pluralVerb: ['do', 'love']
+    pluralVerb: ['do ', 'love ', 'say ', 'watch ', 'change ', 'talk ', 'lead ', 'enjoy ', 'have ', 'rest ', 'stop ', 'start ', 'work ', 'sleep ' ]
 
 }
 
 let singularObject = {
     singularPerson: ['He','It','She'],
-    singularVerb: ['does, love']
+    singularVerb: [
+        'does ',    'love ',
+        'says ',    'watches ',
+        'changes ', 'talks ',
+        'leads ',   'enjoys ',
+        'has ',     'rests ',
+        'stops ',   'starts ',
+        'works ',   'sleeps ',
+        'plays ',   'cries '
+      ]
 }
 
-let nounObject = []
+let nounObject = ['birds',          'space',
+'apple',          'Canada',
+'Brazil',         'TV movies',
+'maths',          'programming',
+'at night',       'in the afternoon',
+'in the morning', 'planes',
+'reading',        'running']
 
 
 
