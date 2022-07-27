@@ -1,13 +1,14 @@
 let pluralObject = {
-    pluralPerson: ['I ','You ','We ','They '],
-    pluralVerb: ['do ', 'love ', 'say ', 'watch ', 'change ', 'talk ', 'lead ', 'enjoy ', 'have ', 'rest ', 'stop ', 'start ', 'work ', 'sleep ', 'play ', 'cry ' ]
+    pluralPerson: ['I ','You ','We ','They ', 'The President and his best fried ', 'Our friends ', 'People from all around the world ', 'Our family ', 'Your friends ', 'The crowd '],
+
+    pluralVerb: ['do ', 'love ', 'say ', 'watch ', 'change ', 'talk ', 'lead ', 'enjoy ', 'have ', 'rest ', 'stop ', 'start ', 'work ', 'sleep ', 'play ', 'cry ', 'travel to ' ]
 
 }
 
 let singularObject = {
-    singularPerson: ['He ','It ','She '],
+    singularPerson: ['He ','It ','She ', 'The Queen ', 'Your dog ', 'The absurdly fast thief ', 'My hope ', 'That kid ', 'Matthew ', 'Bhrena ', 'Murillo ', 'Gandalf ', 'The concierge at our building '],
     singularVerb: [
-        'does ',    'love ',
+        'does ',    'loves ',
         'says ',    'watches ',
         'changes ', 'talks ',
         'leads ',   'enjoys ',
@@ -26,7 +27,13 @@ let nounArray = ['birds',          'space',
 'in the morning', 'planes',
 'reading',        'running',
 'inside the red car', 'outside the church',
-'while looking very angry', 'as John laughs'
+'while looking very angry', 'as John laughs', 
+'as soon as possible', 'as they days go by',
+'inside the old school', 'with his brave dog',
+'near our friend bycicle', 'with my wardrobe', 
+'inside every single New York flat', 
+'literally all the time', 'tirelessly on the top of the Eiffel Tower in Paris',
+'in London'
 ]
 
 
@@ -46,13 +53,13 @@ if (objectTypeRNG === 1){
 
 
 
-const singularPersonRNG = singularObject.singularPerson[Math.floor(Math.random() * 3)]
-const singularVerbRNG = singularObject.singularVerb[Math.floor(Math.random() * 16)]
+var singularPersonRNG = singularObject.singularPerson[Math.floor(Math.random() * singularObject.singularPerson.length)]
+var singularVerbRNG = singularObject.singularVerb[Math.floor(Math.random() * singularObject.singularVerb.length)]
 
-const pluralPersonRNG = pluralObject.pluralPerson[Math.floor(Math.random() * 4)]
-const pluralVerbRNG = pluralObject.pluralVerb[Math.floor(Math.random() * 14)]
+var pluralPersonRNG = pluralObject.pluralPerson[Math.floor(Math.random() * pluralObject.pluralPerson.length)]
+var pluralVerbRNG = pluralObject.pluralVerb[Math.floor(Math.random() * pluralObject.pluralVerb.length)]
 
-const nounArrayRNG = nounArray[Math.floor(Math.random() * 14)]
+var nounArrayRNG = nounArray[Math.floor(Math.random() * nounArray.length)]
 
 
 
@@ -62,7 +69,7 @@ const nounArrayRNG = nounArray[Math.floor(Math.random() * 14)]
 function generatePhrase(){
     
     if (objectType === singularObject){
-        console.log(singularPersonRNG + singularVerbRNG + nounArrayRNG)
+        console.log(singularPersonRNG + singularVerbRNG + nounArrayRNG + '.')
     } else {
         console.log(pluralPersonRNG + pluralVerbRNG + nounArrayRNG + '.')
     }
