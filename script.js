@@ -1,11 +1,11 @@
 let pluralObject = {
-    pluralPerson: ['I','You','We','They'],
-    pluralVerb: ['do ', 'love ', 'say ', 'watch ', 'change ', 'talk ', 'lead ', 'enjoy ', 'have ', 'rest ', 'stop ', 'start ', 'work ', 'sleep ' ]
+    pluralPerson: ['I ','You ','We ','They '],
+    pluralVerb: ['do ', 'love ', 'say ', 'watch ', 'change ', 'talk ', 'lead ', 'enjoy ', 'have ', 'rest ', 'stop ', 'start ', 'work ', 'sleep ', 'play ', 'cry ' ]
 
 }
 
 let singularObject = {
-    singularPerson: ['He','It','She'],
+    singularPerson: ['He ','It ','She '],
     singularVerb: [
         'does ',    'love ',
         'says ',    'watches ',
@@ -18,13 +18,16 @@ let singularObject = {
       ]
 }
 
-let nounObject = ['birds',          'space',
-'apple',          'Canada',
-'Brazil',         'TV movies',
+let nounArray = ['birds',          'space',
+'apple',          'in Canada',
+'in Brazil',         'TV movies',
 'maths',          'programming',
 'at night',       'in the afternoon',
 'in the morning', 'planes',
-'reading',        'running']
+'reading',        'running',
+'inside the red car', 'outside the church',
+'while looking very angry', 'as John laughs'
+]
 
 
 
@@ -32,7 +35,7 @@ let nounObject = ['birds',          'space',
 //Random Number Generator
 // *************
 
-//This will choose between singular and plural PERSONS and store inside personType
+//This will choose between singular and plural VERBS and PERSONS and store inside objectType
 const  objectTypeRNG = Math.floor(Math.random() * 2) 
 var objectType = '' 
 if (objectTypeRNG === 1){
@@ -43,24 +46,27 @@ if (objectTypeRNG === 1){
 
 
 
-const singularPersonRNG = Math.floor(Math.random() * 3)
-const pluralPersonRNG = Math.floor(Math.random() * 4)
-const singularVerb = Math.floor(Math.random() * 4)
-const pluralVerb = Math.floor(Math.random() * 4)
+const singularPersonRNG = singularObject.singularPerson[Math.floor(Math.random() * 3)]
+const singularVerbRNG = singularObject.singularVerb[Math.floor(Math.random() * 16)]
 
-const nounObjectRNG = Math.floor(Math.random() * 4)
+const pluralPersonRNG = pluralObject.pluralPerson[Math.floor(Math.random() * 4)]
+const pluralVerbRNG = pluralObject.pluralVerb[Math.floor(Math.random() * 14)]
 
-// console.log(personObject.pluralPerson[pluralPersonRNG]);
+const nounArrayRNG = nounArray[Math.floor(Math.random() * 14)]
 
 
-console.log('objectType: ', objectType);
-console.log();
+
+
 
 
 function generatePhrase(){
     
-    
+    if (objectType === singularObject){
+        console.log(singularPersonRNG + singularVerbRNG + nounArrayRNG)
+    } else {
+        console.log(pluralPersonRNG + pluralVerbRNG + nounArrayRNG + '.')
+    }
     
 }
 
-
+generatePhrase()
